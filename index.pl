@@ -6,7 +6,7 @@ freq_card(alex, 99).
 freq_resp(alex, 17).
 pa_sis(alex, 100).
 sa02(alex, 96).
-dispneia(alex, N).
+dispneia(alex, 'N').
 comorbidades(alex, 2).
 
 % rules
@@ -117,7 +117,7 @@ paciente_com_alto_risco_laranja(X) :-
     	temperatura_alto_risco(X);
     	pa_sis_alto_risco(X);
     	idade_alto_risco(X);
-    	comorbidades_alto_risco(X);
+    	comorbidades_alto_risco(X)
     ),
     write(X),
     write(' deve ficar em casa, em observação por 14 dias. (alto)').
