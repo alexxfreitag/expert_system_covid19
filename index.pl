@@ -1,13 +1,40 @@
 % facts
 paciente(alex).
+paciente(ana).
+paciente(sahra).
+
 idade(alex, 20).
+idade(ana, 20).
+idade(sahra, 62).
+
 temperatura(alex, 36).
+temperatura(ana, 36).
+temperatura(sahra, 36).
+
 freq_card(alex, 99).
+freq_card(ana, 99).
+freq_card(sahra, 102).
+
 freq_resp(alex, 17).
+freq_resp(ana, 17).
+freq_resp(sahra, 32).
+
 pa_sis(alex, 100).
+pa_sis(ana, 110).
+pa_sis(sahra, 100).
+
 sa02(alex, 96).
+sa02(ana, 96).
+sa02(sahra, 96).
+
 dispneia(alex, 'N').
+dispneia(ana, 'N').
+dispneia(sahra, 'N').
+
 comorbidades(alex, 2).
+comorbidades(ana, 0).
+comorbidades(sahra, 2).
+
 
 % rules
 
@@ -83,6 +110,7 @@ comorbidades_alto_risco(X) :-
     comorbidades(X, Y), Y >= 2.
 
 % verifica risco do paciente
+
 paciente_risco(X) :-
     paciente_com_altissimo_risco_vermelho(X);
     paciente_com_alto_risco_laranja(X);
