@@ -84,10 +84,10 @@ comorbidades_alto_risco(X) :-
 
 % verifica risco do paciente
 paciente_risco(X) :-
-    paciente_sem_risco_verde(X);
-    paciente_com_baixo_risco_amarelo(X);
+    paciente_com_altissimo_risco_vermelho(X);
     paciente_com_alto_risco_laranja(X);
-    paciente_com_altissimo_risco_vermelho(X).
+    paciente_com_baixo_risco_amarelo(X);
+    paciente_sem_risco_verde(X).
     
 paciente_sem_risco_verde(X) :-
     temperatura_sem_risco(X),
